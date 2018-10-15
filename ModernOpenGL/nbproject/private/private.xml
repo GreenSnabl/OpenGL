@@ -9,6 +9,8 @@
         <group>
             <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/main.cpp</file>
             <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/include/Mesh.h</file>
+            <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/Texture.cpp</file>
+            <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/Shader.cpp</file>
             <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/Mesh.cpp</file>
             <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/Display.cpp</file>
             <file>file:/home/den/dev/OpenGL/OpenGL/ModernOpenGL/include/Display.h</file>
