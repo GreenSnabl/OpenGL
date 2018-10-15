@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Display.o \
+	${OBJECTDIR}/Mesh.o \
 	${OBJECTDIR}/Shader.o \
 	${OBJECTDIR}/main.o
 
@@ -68,6 +69,11 @@ ${OBJECTDIR}/Display.o: Display.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Display.o Display.cpp
+
+${OBJECTDIR}/Mesh.o: Mesh.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mesh.o Mesh.cpp
 
 ${OBJECTDIR}/Shader.o: Shader.cpp
 	${MKDIR} -p ${OBJECTDIR}

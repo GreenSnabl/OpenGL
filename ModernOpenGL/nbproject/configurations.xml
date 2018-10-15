@@ -4,8 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Display.h</itemPath>
-      <itemPath>Shader.h</itemPath>
+      <itemPath>include/Display.h</itemPath>
+      <itemPath>Mesh.h</itemPath>
+      <itemPath>include/Shader.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,6 +16,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Display.cpp</itemPath>
+      <itemPath>Mesh.cpp</itemPath>
       <itemPath>Shader.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -48,11 +50,15 @@
       </compileType>
       <item path="Display.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Display.h" ex="false" tool="3" flavor2="0">
+      <item path="Mesh.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mesh.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Shader.h" ex="false" tool="3" flavor2="0">
+      <item path="include/Display.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/Shader.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -80,11 +86,15 @@
       </compileType>
       <item path="Display.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Display.h" ex="false" tool="3" flavor2="0">
+      <item path="Mesh.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mesh.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Shader.h" ex="false" tool="3" flavor2="0">
+      <item path="include/Display.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/Shader.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

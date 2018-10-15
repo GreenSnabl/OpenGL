@@ -11,7 +11,7 @@
  * Created on October 15, 2018, 8:56 PM
  */
 
-#include "Display.h"
+#include "include/Display.h"
 #include <GL/glew.h>
 #include <iostream>
 
@@ -28,16 +28,13 @@ Display::Display(int width, int height, const std::string& title) {
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
     
     m_window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
-    
     m_glContext = SDL_GL_CreateContext(m_window);               // make the window drawable by Open_GL
-
     GLenum status = glewInit();
     
     if (status != GLEW_OK)
     {
         std::cerr << "Glew failed to initialize" << std::endl;
     }
-    
     m_isClosed = false;
 }
 
@@ -63,13 +60,11 @@ bool Display::isClosed() {
 void Display::update()
 {
     SDL_GL_SwapWindow(m_window);
-    
     SDL_Event e;
     
     while(SDL_PollEvent(&e))
     {
         if (e.type == SDL_QUIT)
-            m_isClosed = true;
-        
+            m_isClosed = true;      
     }
 }
