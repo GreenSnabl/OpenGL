@@ -52,7 +52,7 @@ private:
     };
     
     GLuint m_vertexArrayObject;
-    GLuint m_vertexArrayBuffers[1];
+    GLuint m_vertexArrayBuffers[2];
     unsigned int m_drawCount;
 };
 
