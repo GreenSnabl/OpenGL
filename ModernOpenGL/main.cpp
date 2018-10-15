@@ -11,15 +11,20 @@
  * Created on October 15, 2018, 8:23 PM
  */
 
-#include <cstdlib>
+#include "Shader.h"
+#include "Display.h"
 
-using namespace std;
+int main() {
+    Display display(800, 600, "Hello World!");
+    
+    Shader shader("./res/basicShader");
+    
+    while (!display.isClosed())
+    {
+        display.clear(0.0f, 0.15f, 0.3f, 1.0f);
+        shader.Bind();
+        
+        display.update();
+    }
 
-/*
- * 
- */
-int main(int argc, char** argv) {
-
-    return 0;
 }
-

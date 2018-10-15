@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Display.o \
 	${OBJECTDIR}/Shader.o \
 	${OBJECTDIR}/main.o
 
@@ -61,7 +62,12 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/modernopengl: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/modernopengl ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/modernopengl ${OBJECTFILES} ${LDLIBSOPTIONS} -lGLEW -lglfw -lGL -lGLU -lX11 -lpthread -lXxf86vm -lm `sdl2-config --cflags --libs`
+
+${OBJECTDIR}/Display.o: Display.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Display.o Display.cpp
 
 ${OBJECTDIR}/Shader.o: Shader.cpp
 	${MKDIR} -p ${OBJECTDIR}

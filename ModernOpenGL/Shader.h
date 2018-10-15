@@ -14,12 +14,23 @@
 #ifndef SHADER_H
 #define SHADER_H
 
+#include <string>
+#include <GL/glew.h>
+
 class Shader {
 public:
-    Shader();
-    Shader(const Shader& orig);
+    Shader(const std::string& fileName);
+    
+    void Bind();
+    
     virtual ~Shader();
 private:
+    static const unsigned int NUM_SHADERS = 2;
+    Shader(const Shader& orig) {}
+    void operator=(const Shader& other) {}
+
+    GLuint m_program;
+    GLuint m_shaders[NUM_SHADERS];
 
 };
 

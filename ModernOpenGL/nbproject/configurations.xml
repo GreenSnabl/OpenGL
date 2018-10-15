@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Display.h</itemPath>
       <itemPath>Shader.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Display.cpp</itemPath>
       <itemPath>Shader.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -40,7 +42,14 @@
         <ccTool>
           <standard>11</standard>
         </ccTool>
+        <linkerTool>
+          <commandLine>-lGLEW -lglfw -lGL -lGLU -lX11 -lpthread -lXxf86vm -lm `sdl2-config --cflags --libs`</commandLine>
+        </linkerTool>
       </compileType>
+      <item path="Display.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Display.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Shader.h" ex="false" tool="3" flavor2="0">
@@ -69,6 +78,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Display.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Display.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Shader.h" ex="false" tool="3" flavor2="0">
