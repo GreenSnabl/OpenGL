@@ -19,21 +19,25 @@
 
 class Vertex {
 public:
-    Vertex(const glm::vec3& pos)
+    Vertex(const glm::vec3& pos, const glm::vec2& texCoord)
     {
-        this->m_pos = pos;
+        this->pos = pos;
+        this->texCoord = texCoord;
     }
+    
+    inline glm::vec3* getPos() { return &pos; }
+    inline glm::vec2* getTexCoords() { return &texCoord; }
+    
 private:
-    glm::vec3 m_pos;
+    glm::vec3 pos;
+    glm::vec2 texCoord;
     
 };
 
 class Mesh {
 public:
     Mesh(Vertex* vertices, unsigned int numVertices);
-    
-    void draw();
-    
+    void draw();    
     virtual ~Mesh();
     
 private:
@@ -43,7 +47,7 @@ private:
     enum
     {
         POSITION_VB,
-        
+        TEXCOORD_VB,        
         NUM_BUFFERS
     };
     

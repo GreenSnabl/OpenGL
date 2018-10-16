@@ -38,7 +38,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/Display.o \
 	${OBJECTDIR}/Mesh.o \
 	${OBJECTDIR}/Shader.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/Texture.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/stb_image.o
 
 
 # C Compiler Flags
@@ -80,10 +82,20 @@ ${OBJECTDIR}/Shader.o: Shader.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Shader.o Shader.cpp
 
+${OBJECTDIR}/Texture.o: Texture.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Texture.o Texture.cpp
+
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/stb_image.o: stb_image.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/stb_image.o stb_image.c
 
 # Subprojects
 .build-subprojects:

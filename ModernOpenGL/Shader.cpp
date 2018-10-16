@@ -34,6 +34,7 @@ Shader::Shader(const std::string& fileName) {
     
     // Before linking the program we need to bind 
     glBindAttribLocation(m_program, 0, "position");
+    glBindAttribLocation(m_program, 1, "texCoord");
     
     
     // We also need to link the shaders
@@ -57,7 +58,7 @@ Shader::~Shader() {
     glDeleteProgram(m_program);
 }
 
-void Shader::Bind() {
+void Shader::bind() {
     glUseProgram(m_program);
 }
 

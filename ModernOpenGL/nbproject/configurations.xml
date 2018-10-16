@@ -5,8 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>include/Display.h</itemPath>
-      <itemPath>Mesh.h</itemPath>
+      <itemPath>include/Mesh.h</itemPath>
       <itemPath>include/Shader.h</itemPath>
+      <itemPath>include/Texture.h</itemPath>
+      <itemPath>include/stb_image.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -18,7 +20,9 @@
       <itemPath>Display.cpp</itemPath>
       <itemPath>Mesh.cpp</itemPath>
       <itemPath>Shader.cpp</itemPath>
+      <itemPath>Texture.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>stb_image.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -52,15 +56,23 @@
       </item>
       <item path="Mesh.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Mesh.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Texture.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="include/Display.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/Mesh.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/Shader.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/Texture.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/stb_image.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stb_image.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -88,15 +100,23 @@
       </item>
       <item path="Mesh.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Mesh.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Shader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Texture.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="include/Display.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/Mesh.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/Shader.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/Texture.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/stb_image.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stb_image.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

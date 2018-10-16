@@ -21,7 +21,7 @@ class Shader {
 public:
     Shader(const std::string& fileName);
     
-    void Bind();
+    void bind();
     
     virtual ~Shader();
 private:
